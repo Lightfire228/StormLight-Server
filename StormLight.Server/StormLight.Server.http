@@ -1,0 +1,6 @@
+@StormLight.Server_HostAddress = http://localhost:5169
+
+GET {{StormLight.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
