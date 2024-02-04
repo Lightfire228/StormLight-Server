@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StormLight.Database", "Stor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StormLight.Models", "StormLight.Models\StormLight.Models.csproj", "{2BF14EE7-E79A-4B08-9177-1AAD7FE75ACC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StormLight.FileManager", "StormLight.FileManager\StormLight.FileManager.csproj", "{DCDF7B1F-7E4B-468D-B808-14CE718CCF1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{2BF14EE7-E79A-4B08-9177-1AAD7FE75ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BF14EE7-E79A-4B08-9177-1AAD7FE75ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BF14EE7-E79A-4B08-9177-1AAD7FE75ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCDF7B1F-7E4B-468D-B808-14CE718CCF1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCDF7B1F-7E4B-468D-B808-14CE718CCF1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCDF7B1F-7E4B-468D-B808-14CE718CCF1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCDF7B1F-7E4B-468D-B808-14CE718CCF1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
