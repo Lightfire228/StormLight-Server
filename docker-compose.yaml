@@ -1,0 +1,54 @@
+
+services:
+  # app:
+  #   build: ./
+
+  #   develop:
+  #     watch:
+  #       - action: rebuild
+
+  
+  falkor:
+    image: falkordb/falkordb:latest
+
+    volumes:
+      - falkor-data:/app/falkor/
+    
+    environment:
+      - >
+        REDIS_ARGS=
+          --dir        /app/falkor
+          --save       300  1
+          --save        60 10
+          --appendonly yes
+        
+      - >
+        FALKORDB_ARGS=
+          OMP_THREAD_COUNT 4
+        
+
+    expose:
+      - 6379
+      - 3000
+
+
+  postgres:
+    image:   postgres:latest
+    restart: always
+    user:    postgres
+    volumes: 
+      - db-data:/var/lib/postgresql/data
+
+    environment:
+      - POSTGRES_DB=stormlight
+      - POSTGRES_USER=stormlight
+
+    env_file:
+      - ./.env/postgres.env
+
+    expose:
+      - 5432
+
+volumes:
+  db-data:
+  falkor-data:
