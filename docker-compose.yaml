@@ -8,28 +8,28 @@ services:
   #       - action: rebuild
 
   
-  falkor:
-    image: falkordb/falkordb:latest
+  # falkor:
+  #   image: falkordb/falkordb:latest
 
-    volumes:
-      - falkor-data:/app/falkor/
+  #   volumes:
+  #     - falkor-data:/app/falkor/
     
-    environment:
-      - >
-        REDIS_ARGS=
-          --dir        /app/falkor
-          --save       300  1
-          --save        60 10
-          --appendonly yes
+  #   environment:
+  #     - >
+  #       REDIS_ARGS=
+  #         --dir        /app/falkor
+  #         --save       300  1
+  #         --save        60 10
+  #         --appendonly yes
         
-      - >
-        FALKORDB_ARGS=
-          OMP_THREAD_COUNT 4
+  #     - >
+  #       FALKORDB_ARGS=
+  #         OMP_THREAD_COUNT 4
         
 
-    expose:
-      - 6379
-      - 3000
+  #  expose:
+  #    - 6379
+  #    - 3000
 
 
   postgres:
@@ -51,4 +51,4 @@ services:
 
 volumes:
   db-data:
-  falkor-data:
+  # falkor-data:
