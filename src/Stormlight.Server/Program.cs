@@ -1,4 +1,5 @@
 using Stormlight.Models.Api;
+using Stormlight.Server;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,17 +16,10 @@ if (app.Environment.IsDevelopment()) {
     app.UseSwaggerUI();
 }
 
+// TODO:
 // app.UseHttpsRedirection();
 
-app.MapGet("/files", () => {
-    Console.WriteLine($">>>>>>>>>>>> hiya");
-    return new List<FileListing> {
-        new() { Name = "Kaladin.png" },
-        new() { Name = "Navani.md" },
-        new() { Name = "Moash.wncry" },
-        new() { Name = "Odium.exe" },
-    };
-})
+app.MapGet("/files", FilesApi.GetFiles)
 .WithName("GetFiles")
 .WithOpenApi();
 
