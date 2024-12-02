@@ -1,6 +1,6 @@
 namespace Stormlight.Models.Api;
 
-public class FileListing {
+public class FileApiModel() {
+    public string Path { get; set; } = "";
     public string Name { get; set; } = "";
-    public string Type { get; set; } = "";
 }
