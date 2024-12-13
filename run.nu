@@ -1,3 +1,3 @@
 #!/bin/env nu
 
-dotnet run --project src/Stormlight.Server/Stormlight.Server.csproj
+dotnet watch --project src/Stormlight.Server/Stormlight.Server.csproj
